@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom-color">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-exapanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"></div>
+        <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar-center">
+                <li class="nav-item active">
+                    <a class="nav_item nav_link text-light active" href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Concert" asp-action="Index" class="nav_item nav_link text-light">Concert Database</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                    <a class="nav_item nav_link text-light" href="/AboutTH">About Talking Heads</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                    <a class="nav_item nav_link text-light" href="/AboutMe">About Myself</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                    <a class="nav_item nav_link text-light" href="/OtherResources">Other Resources</a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+    <div class="container">
+        <header class="d-flex justify-content-center border-secondary">
+            <h1>Talking Heads Fansite</h1>
+        </header>
+        <img class="rounded mx-auto d-block border border-dark" src="~/images/talking-heads.png" /><br />
+        @RenderBody()
+    </div>
+</body>
+</html>
